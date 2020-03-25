@@ -1,24 +1,36 @@
-class Triangle
+require 'pry'
 
-  def initialize(a, b, c)# write code here
-    #side_array = [a, b, c]
+class Triangle
+  attr_accessor :a, :b, :c
+
+  def initialize(a, b, c)
+    @a = a
+    @b = b
+    @c = c
+    @side_array = []
+    @side_array << a << b << c
+    valid?
   end
 
   def valid?
-    #if array.all? {|n| n > 0 } is true
-      #&&
-      #( a + b > c && b + c > a &&  c + a > b ) is true
-      #then kind()
-    #else
-      #raise error
+    if @side_array.all? {|n| n > 0 } &&
+      ( @a + @b > @c && @b + @c > @a &&  @c + @a > @b )
+      kind
+    else
+      raise TriangleError
+    end
   end
 
   def kind
-    #use array.uniq.length to determine how many unique values in array
+    length = @side_array.uniq.length # use length of array after uniq to determine how many unique values in array
 
-    # length 1  return :equilateral
-    # length 2 return :isosceles
-    # length 3 return :scalene
+    if length == 1
+       return :equilateral
+    elsif length == 2
+       return :isosceles
+    else
+      return :scalene
+    end
   end
 
 
