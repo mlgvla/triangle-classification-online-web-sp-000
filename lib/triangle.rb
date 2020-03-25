@@ -5,7 +5,7 @@ class Triangle
 
   def initialize(a, b, c)
     binding.pry
-    @side_array << a 
+    @side_array << a
     valid?
   end
 
