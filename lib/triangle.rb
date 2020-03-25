@@ -5,7 +5,7 @@ class Triangle
   end
 
   def valid?
-    #if array.any? is true
+    #if array.all? {|n| n > 0 } is true
       #&&
       #( a + b > c && b + c > a &&  c + a > b ) is true
       #then kind()
