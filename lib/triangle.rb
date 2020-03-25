@@ -18,9 +18,9 @@ class Triangle
   def kind
     length = side_array.uniq.length # use length of array after uniq to determine how many unique values in array
 
-    if length == 1 
+    if length == 1
        return :equilateral
-    elsif length == 2 
+    elsif length == 2
        return :isosceles
     else
       return :scalene
