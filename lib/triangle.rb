@@ -2,7 +2,7 @@ class Triangle
   side_array = []
 
   def initialize(a, b, c)
-    side_array = [a, b, c]
+    side_array << a << b << c
     valid?
   end
 
