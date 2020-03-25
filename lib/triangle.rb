@@ -1,9 +1,10 @@
 require 'pry'
 
 class Triangle
-  @side_array = []
+  
 
   def initialize(a, b, c)
+    @side_array = []
     binding.pry
     @side_array << a
     valid?
